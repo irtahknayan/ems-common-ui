@@ -11,7 +11,7 @@
         "dist/ems-common-ui"
       ]
     },
-    "strict": true,
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

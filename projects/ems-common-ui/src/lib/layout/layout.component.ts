@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Menu } from '../models/menu.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'lib-layout',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
+  isOpened: boolean = false;
 
+  //@Input() menuList: Menu;
+  menuList: Observable<Menu[]>;
   constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    //this.menuList = this.httpService.getList<IMenu>("/assets/menu.json")
   }
-
 }

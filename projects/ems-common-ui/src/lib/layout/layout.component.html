@@ -1,1 +1,21 @@
-<p>layout works!</p>
+<lib-header></lib-header>
+<mat-sidenav-container>
+    <!-- mode="side" to keep it always opened, [(opened)]="isOpened" for toggle functionality  -->
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list class="hover">
+            <button mat-button [routerLink]="['/departments']">
+                <mat-icon>laptop</mat-icon>
+                &nbsp;Departments
+            </button>
+            <button mat-button [routerLink]="['/employees']">
+                <mat-icon>person</mat-icon>
+                &nbsp;Employees
+            </button>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>
